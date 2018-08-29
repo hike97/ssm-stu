@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="stu_score@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="stu_score">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="activiti_db"/>
+    <schema id="4" parent="1" name="activiti_demo"/>
+    <schema id="5" parent="1" name="aopsdb"/>
+    <schema id="6" parent="1" name="demo"/>
+    <schema id="7" parent="1" name="hibernate5"/>
+    <schema id="8" parent="1" name="igtrbsdb"/>
+    <schema id="9" parent="1" name="imp"/>
+    <schema id="10" parent="1" name="imsrbdb"/>
+    <schema id="11" parent="1" name="information_schema"/>
+    <schema id="12" parent="1" name="mysql"/>
+    <schema id="13" parent="1" name="performance_schema"/>
+    <schema id="14" parent="1" name="test"/>
+    <schema id="15" parent="1" name="testactivitiweb1"/>
+    <schema id="16" parent="1" name="ycoa"/>
+    <schema id="17" parent="1" name="ycpl"/>
+    <table id="18" parent="2" name="score"/>
+    <table id="19" parent="2" name="student"/>
+    <column id="20" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="21" parent="18" name="stu_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="22" parent="18" name="score">
+      <Position>3</Position>
+      <DataType>double(11,2)|0</DataType>
+    </column>
+    <column id="23" parent="18" name="year">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="24" parent="18" name="create_time">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="25" parent="18" name="update_time">
+      <Position>6</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="26" parent="18" name="status">
+      <Position>7</Position>
+      <DataType>int(2)|0</DataType>
+    </column>
+    <index id="27" parent="18" name="stu_id">
+      <ColNames>stu_id</ColNames>
+    </index>
+    <key id="28" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="29" parent="18" name="score_ibfk_1">
+      <ColNames>stu_id</ColNames>
+      <RefSchemaName>stu_score</RefSchemaName>
+      <RefTableName>student</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="30" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="31" parent="19" name="user_Name">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="32" parent="19" name="pass_Word">
+      <Position>3</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="33" parent="19" name="real_name">
+      <Position>4</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="34" parent="19" name="gender">
+      <Position>5</Position>
+      <DataType>int(2)|0</DataType>
+    </column>
+    <column id="35" parent="19" name="age">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="36" parent="19" name="role">
+      <Position>7</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="37" parent="19" name="status">
+      <Position>8</Position>
+      <DataType>int(2)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="38" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
