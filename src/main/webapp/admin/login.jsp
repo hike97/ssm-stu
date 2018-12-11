@@ -29,8 +29,8 @@
 			<input type="password" name="password" class="form-control" placeholder="密码" required="">
 			<div class="checkbox mb-3">
 				<label>
-          <%--<input type="checkbox" value="remember-me"> Remember me--%>
-        </label>
+          			<input type="checkbox" name="remember" value="1"> 记住我
+        		</label>
 			</div>
 			<button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
 			<p class="mt-5 mb-3 text-muted">© 2017-2018</p>

@@ -1,3 +1,4 @@
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: hike97
@@ -9,7 +10,7 @@
 <nav class="col-md-2 d-none d-md-block bg-light sidebar">
     <div class="sidebar-sticky">
         <ul class="nav flex-column">
-            <c:if test="${sessionScope.loginUser.role eq 'admin'}">
+            <shiro:hasRole name="admin">
                 <li class="nav-item">
                     <a class="nav-link" href="<%=request.getContextPath()%>/stu/info/students">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
@@ -38,8 +39,8 @@
                         个人成绩查看
                     </a>
                 </li>
-            </c:if>
-            <c:if test="${sessionScope.loginUser.role eq 'student'}">
+            </shiro:hasRole>
+            <shiro:hasRole name="admin">
             <li class="nav-item">
                 <a class="nav-link" href="<%=request.getContextPath()%>/score/info/scores/${sessionScope.loginUser.id}">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
@@ -50,7 +51,7 @@
                    成绩查看
                 </a>
             </li>
-            </c:if>
+            </shiro:hasRole>
         </ul>
     </div>
 </nav>

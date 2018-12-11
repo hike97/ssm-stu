@@ -49,7 +49,7 @@ public class StudentController extends BaseController {
     @PutMapping("/student")
     public String updateEmployee(Student student){
         student.setStatus(0);
-        //System.out.println("修改的学生数据："+student);
+//        System.out.println("修改的学生数据："+student);
         studentService.save(student);
         return "redirect:/stu/info/students";
     }

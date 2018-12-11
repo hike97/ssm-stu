@@ -21,7 +21,6 @@ public class ScoreController extends BaseController {
     //查看
     @GetMapping("/scores/{stuId}")
     public String getlist(@PathVariable Integer stuId){
-        System.out.println(">>>>"+stuId);
         List<Score> scores = scoreService.getList(stuId);
         request.setAttribute("scores",scores);
         if (stuId==0){
